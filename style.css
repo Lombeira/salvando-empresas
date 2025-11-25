@@ -378,50 +378,122 @@ header {
 }
 
 /* How It Works Section */
-.steps-grid {
+.how-it-works-section {
+    background-color: #fafafa;
+}
+
+.steps-flow {
+    position: relative;
+    margin-top: 60px;
+    min-height: 600px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 120px;
+    padding: 40px;
+    align-items: center;
 }
 
 .step-card {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    max-width: 320px;
 }
 
 .step-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Posicionamento e rotação individual dos cards */
+.step-1 {
+    transform: rotate(-3deg);
+    justify-self: end;
+}
+
+.step-2 {
+    transform: rotate(2deg);
+    justify-self: start;
+}
+
+.step-3 {
+    transform: rotate(-2deg);
+    justify-self: end;
+}
+
+.step-4 {
+    transform: rotate(3deg);
+    justify-self: start;
+}
+
+/* Setas conectoras SVG */
+.arrow-connector {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* Seta horizontal 1→2 */
+.arrow-1-2 {
+    width: 140px;
+    height: 60px;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Seta diagonal 2→3 */
+.arrow-2-3 {
+    width: 100px;
+    height: 120px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    opacity: 1;
+}
+
+/* Seta horizontal 3→4 */
+.arrow-3-4 {
+    width: 140px;
+    height: 60px;
+    top: 66%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .step-number {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    margin: 0 auto 20px;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
 }
 
 .step-card h3 {
     color: #2c3e50;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .step-card p {
-    color: #666;
+    color: #555;
     line-height: 1.6;
+    font-size: 0.9rem;
     text-align: left;
 }
 
@@ -476,6 +548,10 @@ header {
 }
 
 /* Donate Section */
+.donate-section {
+    padding-bottom: 80px !important;
+}
+
 .donation-methods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -612,7 +688,7 @@ header {
 
 /* Final CTA Section */
 .final-cta-section {
-    background-color: #fffbea;
+    background: linear-gradient(to top left, #f5efe3 0%, #f8f3e8 30%, #fdfaf5 60%, #ffffff 100%);
     text-align: center;
 }
 
@@ -645,25 +721,32 @@ header {
     box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
 }
 
-/* Footer */
-.footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-
 /* Responsivo para telas grandes (1920px+) */
 @media (min-width: 1920px) {
     .crisis-image,
     .entrepreneur-image {
         max-width: 550px;
+    }
+
+    .steps-flow {
+        gap: 100px 160px;
+        padding: 60px;
+    }
+
+    .step-card {
+        max-width: 380px;
+        padding: 30px;
+    }
+
+    .arrow-1-2,
+    .arrow-3-4 {
+        width: 160px;
+        height: 70px;
+    }
+
+    .arrow-2-3 {
+        width: 280px;
+        height: 250px;
     }
 }
 
@@ -689,6 +772,26 @@ header {
     .entrepreneur-image {
         max-width: 350px;
     }
+
+    .steps-flow {
+        gap: 70px 100px;
+        padding: 35px;
+    }
+
+    .step-card {
+        max-width: 290px;
+    }
+
+    .arrow-1-2,
+    .arrow-3-4 {
+        width: 120px;
+        height: 55px;
+    }
+
+    .arrow-2-3 {
+        width: 210px;
+        height: 200px;
+    }
 }
 
 /* Responsivo para tablets (769-1023px) */
@@ -696,6 +799,34 @@ header {
     .crisis-image,
     .entrepreneur-image {
         max-width: 300px;
+    }
+
+    .steps-flow {
+        gap: 60px 80px;
+        padding: 30px;
+    }
+
+    .step-card {
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .arrow-1-2 {
+        width: 120px;
+        height: 50px;
+        top: 15%;
+    }
+
+    .arrow-2-3 {
+        width: 200px;
+        height: 200px;
+        top: 30%;
+    }
+
+    .arrow-3-4 {
+        width: 120px;
+        height: 50px;
+        top: 65%;
     }
 }
 
@@ -713,12 +844,6 @@ header {
     }
 
     header {
-        scroll-snap-align: none;
-        scroll-snap-stop: normal;
-    }
-
-    .footer {
-        min-height: auto;
         scroll-snap-align: none;
         scroll-snap-stop: normal;
     }
@@ -756,10 +881,40 @@ header {
     }
 
     .how-we-work,
-    .steps-grid,
     .testimonials,
     .donation-methods {
         grid-template-columns: 1fr;
+    }
+
+    /* Steps flow mobile */
+    .steps-flow {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .step-card {
+        transform: none !important;
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .step-card:hover {
+        transform: scale(1.02) !important;
+    }
+
+    .arrow-connector {
+        display: none;
+    }
+
+    .step-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .step-card p {
+        font-size: 0.9rem;
     }
 
     .btn-primary {

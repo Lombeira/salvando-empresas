@@ -99,26 +99,49 @@
     <section class="section how-it-works-section">
         <div class="container">
             <h2 class="section-title">Como Funciona o Fundo de Socorro Empresarial</h2>
-            <div class="steps-grid">
-                <div class="step-card">
+            <div class="steps-flow">
+                <div class="step-card step-1">
                     <div class="step-number">1</div>
                     <h3>Seleção das Empresas</h3>
                     <p>Empreendedores em dificuldade apresentam seus negócios. Uma equipe técnica avalia
                         a real necessidade, o potencial de recuperação e o impacto na preservação de empregos.</p>
                 </div>
-                <div class="step-card">
+
+                <svg class="arrow-connector arrow-1-2" viewBox="0 0 200 100" preserveAspectRatio="none">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+                        </marker>
+                    </defs>
+                    <path d="M 10 50 Q 100 30, 190 50" stroke="#e74c3c" stroke-width="2.5" stroke-dasharray="6,4"
+                        fill="none" marker-end="url(#arrowhead)" stroke-linecap="round" />
+                </svg>
+
+                <div class="step-card step-2">
                     <div class="step-number">2</div>
                     <h3>Análise e Aprovação</h3>
                     <p>São considerados fatores como histórico, responsabilidade do empresário, importância
                         local do negócio e urgência do socorro financeiro.</p>
                 </div>
-                <div class="step-card">
+
+                <svg class="arrow-connector arrow-2-3" viewBox="0 0 200 200" preserveAspectRatio="none">
+                    <path d="M 185 15 Q 140 60, 100 100 Q 60 140, 15 185" stroke="#e74c3c" stroke-width="3"
+                        stroke-dasharray="6,4" fill="none" marker-end="url(#arrowhead)" stroke-linecap="round" />
+                </svg>
+
+                <div class="step-card step-3">
                     <div class="step-number">3</div>
                     <h3>Aporte dos Recursos</h3>
                     <p>As doações são destinadas diretamente ao plano de recuperação da empresa, auxiliando
                         em capital de giro, renegociação de dívidas ou retomada de operação.</p>
                 </div>
-                <div class="step-card">
+
+                <svg class="arrow-connector arrow-3-4" viewBox="0 0 200 100" preserveAspectRatio="none">
+                    <path d="M 10 50 Q 100 30, 190 50" stroke="#e74c3c" stroke-width="2.5" stroke-dasharray="6,4"
+                        fill="none" marker-end="url(#arrowhead)" stroke-linecap="round" />
+                </svg>
+
+                <div class="step-card step-4">
                     <div class="step-number">4</div>
                     <h3>Acompanhamento e Relatórios</h3>
                     <p>Cada caso apoiado gera relatórios, dentro dos limites de privacidade, demonstrando
@@ -175,6 +198,64 @@
         </div>
     </section>
 
+    <!-- Seção: Para Quem Este Movimento Foi Criado -->
+    <section class="section target-audience-section">
+        <div class="container">
+            <h2 class="section-title">Para Quem Este Movimento Foi Criado?</h2>
+            <p class="section-text">
+                Essa missão é para quem acredita que o Brasil pode ser melhor na prática, e não só no discurso:
+            </p>
+            <ul class="target-list">
+                <li>Empresários que cresceram e sabem como é duro começar.</li>
+                <li>Pessoas que querem ver o país avançar de verdade, apoiando quem trabalha.</li>
+                <li>Investidores sociais e filantropos que acreditam no poder da economia real.</li>
+                <li>Cidadãos comuns que desejam fazer parte de algo maior que eles mesmos.</li>
+            </ul>
+            <p class="section-text highlight-orange">
+                Se você acredita na força do empreendedor brasileiro, esta página é para você.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção: Transparência e Responsabilidade -->
+    <section class="section transparency-section">
+        <div class="container">
+            <h2 class="section-title">Transparência e Responsabilidade</h2>
+            <p class="section-text">
+                Sabemos que confiança se constrói com atitudes claras. Por isso, assumimos o compromisso de
+                prestar contas de forma responsável e acessível.
+            </p>
+            <ul class="transparency-list">
+                <li>Relatórios periódicos sobre o uso dos recursos.</li>
+                <li>Auditoria independente dos processos e contas.</li>
+                <li>Lista das empresas apoiadas, sempre que houver autorização.</li>
+                <li>Comunicação aberta com doadores interessados em acompanhar os resultados.</li>
+            </ul>
+            <p class="section-text">
+                Cada centavo doado é tratado com o máximo respeito, porque sabemos que ele representa
+                confiança — e confiança não se desperdiça.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção: Call to Action Final -->
+    <section class="section final-cta-section">
+        <div class="container">
+            <h2 class="section-title centered">A sua ação hoje pode salvar uma empresa amanhã</h2>
+            <p class="section-text centered">
+                A sua doação pode ser a diferença entre uma porta fechada e uma empresa funcionando,
+                entre demissões em massa e empregos preservados, entre desespero e esperança.
+            </p>
+            <p class="section-text centered">
+                Salvar empresas é salvar famílias, proteger empregos e construir, na prática,
+                o Brasil em que todos nós queremos viver.
+            </p>
+            <button class="btn-final-cta" onclick="scrollToDonate()">
+                DOE AGORA — TRANSFORME UMA EMPRESA BRASILEIRA HOJE
+            </button>
+        </div>
+    </section>
+
     <!-- Seção: Como Doar -->
     <section id="donate" class="section donate-section">
         <div class="container">
@@ -220,71 +301,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Seção: Para Quem Este Movimento Foi Criado -->
-    <section class="section target-audience-section">
-        <div class="container">
-            <h2 class="section-title">Para Quem Este Movimento Foi Criado?</h2>
-            <p class="section-text">
-                Essa missão é para quem acredita que o Brasil pode ser melhor na prática, e não só no discurso:
-            </p>
-            <ul class="target-list">
-                <li>Empresários que cresceram e sabem como é duro começar.</li>
-                <li>Pessoas que querem ver o país avançar de verdade, apoiando quem trabalha.</li>
-                <li>Investidores sociais e filantropos que acreditam no poder da economia real.</li>
-                <li>Cidadãos comuns que desejam fazer parte de algo maior que eles mesmos.</li>
-            </ul>
-            <p class="section-text highlight-orange">
-                Se você acredita na força do empreendedor brasileiro, esta página é para você.
-            </p>
-        </div>
-    </section>
-
-    <!-- Seção: Transparência e Responsabilidade -->
-    <section class="section transparency-section">
-        <div class="container">
-            <h2 class="section-title">Transparência e Responsabilidade</h2>
-            <p class="section-text">
-                Sabemos que confiança se constrói com atitudes claras. Por isso, assumimos o compromisso de
-                prestar contas de forma responsável e acessível.
-            </p>
-            <ul class="transparency-list">
-                <li>Relatórios periódicos sobre o uso dos recursos.</li>
-                <li>Auditoria independente dos processos e contas.</li>
-                <li>Lista das empresas apoiadas, sempre que houver autorização.</li>
-                <li>Comunicação aberta com doadores interessados em acompanhar os resultados.</li>
-            </ul>
-            <p class="section-text">
-                Cada centavo doado é tratado com o máximo respeito, porque sabemos que ele representa
-                confiança — e confiança não se desperdiça.
-            </p>
-        </div>
-    </section>
-
-    <!-- Seção: Call to Action Final -->
-    <section class="section final-cta-section">
-        <div class="container">
-            <h2 class="section-title centered">A Sua Ação Hoje Pode Salvar Uma Empresa Amanhã</h2>
-            <p class="section-text centered">
-                A sua doação pode ser a diferença entre uma porta fechada e uma empresa funcionando,
-                entre demissões em massa e empregos preservados, entre desespero e esperança.
-            </p>
-            <p class="section-text centered">
-                Salvar empresas é salvar famílias, proteger empregos e construir, na prática,
-                o Brasil em que todos nós queremos viver.
-            </p>
-            <button class="btn-final-cta" onclick="scrollToDonate()">
-                DOE AGORA — TRANSFORME UMA EMPRESA BRASILEIRA HOJE
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Salvando Empresas. Todos os direitos reservados.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
